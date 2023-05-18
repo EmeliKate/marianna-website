@@ -1,83 +1,112 @@
-import './App.css';
+import './App.module.scss';
 import Header from "../header/Header"
 import React from 'react';
-import {Drawer, Anchor} from "antd";
+import {Drawer, Anchor, Button, Layout} from "antd";
 import About from "../about/About";
-import {useDispatch, useSelector} from "react-redux";
-import {toggleMenu} from "../../features/menu/menuSlice";
+import {useState} from "react";
+import styles from "./App.module.scss"
+import Education from "../education/Education";
+import Recognition from "../recognition/Recognition";
+import Ethics from "../ethics/Ethics";
 
 function App() {
 
-    const {isOpen} = useSelector((store) => store.menu)
-    const dispatch = useDispatch()
+    console.log("App mounted")
+
+    const [menuShown, setMenuShown] = useState(true)
 
     const onClose = () => {
-        dispatch(toggleMenu())
+        setMenuShown(prevState => !prevState)
     }
 
-    return (
-    <div className="App">
+    return <div className={styles.app}>
         <Header />
+        {!menuShown && <Button
+            className = {styles.contentsBtn}
+            onClick = {onClose}
+            colorPrimary = {"rgba(0, 0, 0, 0)"}
+            colorText = {"rgba(100,0,0,0)"}
+        >
+            Содержание
+        </Button>}
         <Drawer
-            className = "settings"
-            placement = "right"
-            open = {isOpen}
+            title = "Содержание"
+            className = {styles.contents}
+            placement = "left"
+            open = {menuShown}
             onClose = {onClose}
-            mask={false}
+            mask = {false}
+            width = "270px"
         >
             <Anchor
                 items={[
                     {
                         key: 'about-row',
                         href: '#about-row',
-                        title: 'About',
+                        title: 'Обо мне',
                     },
                     {
                         key: 'education-row',
                         href: '#education-row',
-                        title: 'Education',
+                        title: 'Образование',
                     },
                     {
                         key: 'recognition-row',
                         href: '#recognition-row',
-                        title: 'Recognition',
+                        title: "Профессиональное признание",
                     },
                     {
                         key: 'ethics-row',
                         href: '#ethics-row',
-                        title: 'Ethics',
+                        title: 'Этический кодекс',
                     },
                     {
                         key: 'theory-row',
                         href: '#theory-row',
-                        title: 'Theory',
+                        title: 'Транзактный анализ',
                     },
                     {
                         key: 'articles-row',
                         href: '#articles-row',
-                        title: 'Articles',
+                        title: 'Статьи',
                     },
                     {
                         key: 'review-row',
                         href: '#review-row',
-                        title: 'Review',
+                        title: 'Отзывы',
                     },
                     {
                         key: 'contacts-row',
                         href: '#contacts-row',
-                        title: 'Contacts',
+                        title: 'Контакты',
                     }
                 ]}
             >
             </Anchor>
         </Drawer>
-        <div
-            id="about-row"
-        >
-            <About />
-        </div>
+        <Layout className={menuShown ? styles.mainSection : styles.mainSectionFullScreen}>
+            <div
+                id = "about-row"
+            >
+                <About />
+            </div>
+            <div
+                id = "education-row"
+            >
+                <Education />
+            </div>
+            <div
+                id = "recognition-row"
+            >
+                <Recognition />
+            </div>
+            <div
+                id = "ethics-row"
+            >
+                <Ethics />
+            </div>
+        </Layout>
     </div>
-  );
 }
 
 export default App;

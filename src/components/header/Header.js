@@ -9,8 +9,8 @@ const Header = () => {
     >
         test test test test test test test test test
         <Image
-            src={"../../assets/header_pic.jpg"}
-            alt={"Marianna's photo"}
+            src = {"../../assets/header_pic.jpg"}
+            alt = {"Marianna's photo"}
         >
         </Image>
     </Layout>
