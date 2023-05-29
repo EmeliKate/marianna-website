@@ -1,21 +1,15 @@
 import styles from "./About.module.scss"
 import {Layout} from "antd";
 import React from 'react';
+import data from "../../assets/text/About.json"
 
 const About = () => {
-    return <Layout className = {styles.about}>
-        <Layout className = {styles.headingAbout}> Обо мне </Layout>
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
 
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
-        some text some text some text some text some text some text some text some text some text
+    let text = data.data
+
+    return <Layout className = {styles.about}>
+        <Layout className = {styles.headingAbout}> {text[0].title} </Layout>
+        {text[0].description}
     </Layout>
 }
 

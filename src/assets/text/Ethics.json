@@ -1,0 +1,38 @@
+
+{
+  "name": "ethics",
+  "data": [
+    {
+      "title": "Rule 1",
+      "description": "some rule some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 2",
+      "description": "some rule some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 3",
+      "description": "some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 4",
+      "description": "some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 5",
+      "description": "some rule some rule some rule s some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 6",
+      "description": "some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule"
+    },
+    {
+      "title": "Rule 7",
+      "description": "some rule some rule some rule some rule some rule some rule some rule "
+    },
+    {
+      "title": "Rule 8",
+      "description": "some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule some rule "
+    }
+  ]
+}

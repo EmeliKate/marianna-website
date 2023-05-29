@@ -1,39 +1,15 @@
 import styles from "./Ethics.module.scss"
 import {List, Layout} from "antd";
 import React from 'react';
+import data from "../../assets/text/Ethics.json"
 
-const data = [
-    {
-        title: 'Rule 1',
-        description: "some description 1 some description 1 some description 1 some description 1 some description 1 some description 1 some description 1"
-    },
-    {
-        title: 'Rule 2',
-        description: "some description 2some description 2some description 2some description 2 some description 2"
-    },
-    {
-        title: 'Rule 3',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    },
-    {
-        title: 'Rule 4',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    },
-    {
-        title: 'Rule 5',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    },
-    {
-        title: 'Rule 6',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    }
-];
+const ethicsItems = data.data
 
 const Ethics = () => {
     return <div>
         <Layout className = {styles.headingEthics}> Этический кодекс </Layout>
         <List
-            dataSource = {data}
+            dataSource = {ethicsItems}
             itemLayout="vertical"
             renderItem = { (item) => (
                 <List.Item>

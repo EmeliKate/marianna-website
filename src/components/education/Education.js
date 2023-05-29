@@ -1,27 +1,14 @@
 import styles from "./Education.module.scss"
 import {List, Layout} from "antd";
 import React from 'react';
+import data from "../../assets/text/Education.json"
 
-const data = [
-    {
-        title: 'Qualification 1',
-        description: "some description 1 some description 1 some description 1 some description 1 some description 1 some description 1 some description 1"
-    },
-    {
-        title: 'Qualification 2',
-        description: "some description 2some description 2some description 2some description 2 some description 2"
-    },
-    {
-        title: 'Qualification 3',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    }
-];
-
+const educationItems = data.data;
 const Education = () => {
     return <div>
         <Layout className = {styles.headingEducation}> Образование </Layout>
         <List
-            dataSource = {data}
+            dataSource = {educationItems}
             itemLayout="vertical"
             renderItem = { (item) => (
                 <List.Item>

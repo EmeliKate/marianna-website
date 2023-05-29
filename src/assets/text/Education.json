@@ -1,0 +1,18 @@
+
+{
+  "name": "education",
+  "data": [
+    {
+      "title": "University",
+      "description": "Psychology Degree"
+    },
+    {
+      "title": "Qualification",
+      "description": "Transact analysis"
+    },
+    {
+      "title": "Qualification",
+      "description": "Transact analysis"
+    }
+  ]
+}

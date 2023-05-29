@@ -1,0 +1,18 @@
+
+{
+  "name": "recognition",
+  "data": [
+    {
+      "title": "Conference",
+      "description": "some description"
+    },
+    {
+      "title": "Community",
+      "description": "some description"
+    },
+    {
+      "title": "Something else",
+      "description": "some description"
+    }
+  ]
+}

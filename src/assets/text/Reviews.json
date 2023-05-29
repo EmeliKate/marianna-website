@@ -1,0 +1,26 @@
+
+{
+  "name": "reviews",
+  "data": [
+    {
+      "author": "name 1",
+      "review": "some review, very good specialist"
+    },
+    {
+      "author": "name 2",
+      "review": "some review, very good specialist"
+    },
+    {
+      "author": "name 3",
+      "review": "some review, very good specialist"
+    },
+    {
+      "author": "name 4",
+      "review": "some review, very good specialist"
+    },
+    {
+      "author": "name 5",
+      "review": "some review, very good specialist"
+    }
+  ]
+}

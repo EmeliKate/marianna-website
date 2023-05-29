@@ -1,0 +1,18 @@
+
+{
+  "name": "contacts",
+  "data": [
+    {
+      "title": "Phone",
+      "description": "+7 (812) 123 4567"
+    },
+    {
+      "title": "Telegram",
+      "description": "@Marianna"
+    },
+    {
+      "title": "Address",
+      "description": "Saint Petersburg, Nevsky 123, 123"
+    }
+  ]
+}

@@ -1,27 +1,15 @@
 import styles from "./Recognition.module.scss"
 import {List, Layout} from "antd";
 import React from 'react';
+import data from "../../assets/text/Recognition.json"
 
-const data = [
-    {
-        title: 'Item 1',
-        description: "some description 1 some description 1 some description 1 some description 1 some description 1 some description 1 some description 1"
-    },
-    {
-        title: 'Item 2',
-        description: "some description 2some description 2some description 2some description 2 some description 2"
-    },
-    {
-        title: 'Item 3',
-        description: "some description 3some description 3some description 3some description 3some description 3some description 3some description 3"
-    }
-];
+const recognitionItems = data.data
 
 const Recognition = () => {
     return <div>
         <Layout className = {styles.headingRecognition}> Профессиональное признание </Layout>
         <List
-            dataSource = {data}
+            dataSource = {recognitionItems}
             itemLayout="vertical"
             renderItem = { (item) => (
                 <List.Item>

@@ -7,7 +7,7 @@ const Header = () => {
     return <Layout
         className={styles.header}
     >
-        test test test test test test test test test
+        Марианна. Психолог
         <Image
             src = {"../../assets/header_pic.jpg"}
             alt = {"Marianna's photo"}
