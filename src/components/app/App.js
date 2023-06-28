@@ -92,6 +92,8 @@ function App() {
             onClose = {onClose}
             mask = {false}
             width = "270px"
+            style = {{ backgroundColor: "rgb(15, 63, 39)" }}
+            bodyStyle = {{ backgroundColor: "white" }}
         >
             <Anchor
                 items={componentList}

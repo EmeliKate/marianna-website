@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss"
 import {Layout, Image} from "antd";
 import React from 'react';
+import photo from "../../assets/images/header_pic.jpg"
 
 const Header = () => {
 
@@ -8,11 +9,14 @@ const Header = () => {
         className={styles.header}
     >
         Марианна. Психолог
-        <Image
-            src = {"../../assets/header_pic.jpg"}
-            alt = {"Marianna's photo"}
-        >
-        </Image>
+        <div className={styles.image}>
+            <Image
+                src = {photo}
+                alt = {"Marianna's photo"}
+                style={{ width: "20vw" }}
+            >
+            </Image>
+        </div>
     </Layout>
 }
 
